@@ -1,0 +1,332 @@
+
+/* --------------*/
+/*General Resets */
+/* --------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* Ressetting margins of elements */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+picture {
+    margin : 0
+}
+
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p{
+   font-weight: 100;
+}
+
+/* Setting up our body */
+body {
+    /* height: 100vh; */
+    background-image: linear-gradient(to right, hsl(273, 75%, 66%), hsl(240, 73%, 65%) );
+    font-size: 0.75rem;
+    /* font-family: 'Kumbh Sans', sans-serif; */
+}
+
+/* Making Images easier to easier to style */
+img,
+picture {
+max-width: 100%;
+display: block; 
+}
+
+/* Making forms easier to work with */
+input,
+button,
+text-area,
+select {
+    font : inherit
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Removing list styles on ul,ol elements */
+ul[role = "list"],
+li[role="list"] {
+    list-style: none;
+}
+
+.container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 950px;
+    background: whitesmoke;
+    margin: 5rem auto;
+    border-radius:2rem;
+    height: 450px
+}
+
+.image{
+    width: 50%;
+    position: relative;
+    /* height:25rem; */
+}
+
+
+.bg-pattern{
+    background: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 120%;
+    height: 30rem;
+    position: absolute;
+    top: -200px;
+    left: -10px;
+   
+}
+
+
+.illustration-woman-online{
+    background: url(images/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 120%;
+    height:20rem;
+    position: absolute;
+    top: -160px;
+    left: -120px;
+    z-index: 2;
+}
+
+.illustration-box-desktop{
+    background: url(images/illustration-box-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height:10rem;
+    position: absolute;
+    left: -150px;
+    z-index: 3;
+}
+
+.text{
+    margin: 0rem 5rem;
+    width: 50%;
+    font-family: 'Kumbh Sans', sans-serif;
+
+    
+}
+
+.heading{
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 1.5rem auto;
+    padding-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color:  hsl(238, 29%, 16%);
+    padding-left: 0.1rem
+}
+
+.parent{
+    margin-top: 1rem;
+    position: relative;
+   
+}
+
+.faq{
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 1rem 0;
+    padding: 0.2rem; 
+    position: relative;
+}
+
+
+.faq::after{
+    content: "";
+    position: absolute;
+    background-color: hsl(240, 5%, 91%);
+    right:0;
+    left:0;
+    height: 1px;
+    width: 23rem;
+    margin-top: 1rem
+   
+   
+}
+
+
+.faq-heading{
+    color:  hsl(238, 29%, 16%);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 200;
+}
+
+.faq-heading:hover{
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+.faq-content{
+    color:hsl(240, 6%, 50%);
+    margin-right: 2rem;
+    padding-right: 3rem;
+    padding-left: 0rem;
+    line-height: 20px;
+    margin-top: 1rem
+}
+
+
+
+.faq.active .faq-heading {
+    color:   black;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.faq-content {
+    display: none
+}
+
+.faq.active .faq-content {
+    display: block;
+}
+
+.faq-button{
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border:0;
+    top: 5px;
+    right: 30px;
+}
+
+.faq-button .arrow-up{
+    transform: rotate(180deg);
+    display: none;
+}
+
+.faq.active .faq-button .arrow-up{
+    display: block;
+}
+
+.faq.active .faq-button .arrow-down{
+    display: none;
+}
+
+
+
+
+@media (max-width: 991px){
+    body{
+        overflow: hidden;
+    }
+    .container{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 350px;
+        background: whitesmoke;
+        margin: 8rem auto;
+        border-radius:2rem;
+        height: 500px
+    }
+
+    .image{
+        width: 50%;
+        position: relative;
+        /* height:25rem; */
+    }
+
+
+    .bg-pattern{
+        background: url(images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 120%;
+        height: 20rem;
+        position: absolute;
+        left: -10px;
+        top: -150px;
+       
+    }
+    
+    
+    .illustration-woman-online{
+        background: url(images/illustration-woman-online-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 121%;
+        height:10rem;
+        position: absolute;
+        top: -190px;
+        left: -10px;
+    }
+
+
+    .illustration-box-desktop{
+        display: none;
+    }
+
+
+    .text{
+        margin: 0rem 5rem;
+        width: 90%;
+        font-family: 'Kumbh Sans', sans-serif;
+    
+        
+    }
+
+    .heading{
+        text-align: center;
+    }
+
+
+    
+.faq::after{
+    content: "";
+    position: absolute;
+    background-color: hsl(240, 5%, 91%);
+    right:0;
+    left:0;
+    height: 1px;
+    width: 19rem;
+    margin-top: 1rem
+   
+   
+}
+    
+    
+}
